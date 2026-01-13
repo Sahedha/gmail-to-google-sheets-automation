@@ -14,10 +14,10 @@ OAuth 2.0 Installed App flow is used to securely access Gmail and Google Sheets.
 ## ⚙️ Features
 - Reads unread emails from Gmail Inbox
 - Extracts sender, subject, date, and body
-- Appends email data to Google Sheets
+- Automatically appends email data to Google Sheets
 - Marks processed emails as read
 - Prevents duplicate processing using local state
-- Subject-based email filtering (Bonus)
+- Secure OAuth2 authentication
 
 ## 🧠 Duplicate Prevention Logic
 Each Gmail message has a unique and immutable message ID. Processed message IDs are stored in a local `state.json` file. On subsequent runs, emails with IDs already present in the state file are skipped, ensuring idempotent execution.
@@ -43,5 +43,9 @@ Handling duplicate email processing was challenging. This was solved by implemen
 - Script processes only unread inbox emails
 
 ## 📸 Proof of Execution
-Screenshots and execution proof are available in the `/proof` folder.
+Screenshots and execution proof are available in the `/proof` folder
+
+## Customization
+- You can filter emails by subject keyword (optional)
+- Sheet ID and scopes can be configured in config.py
 
