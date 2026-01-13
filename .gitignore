@@ -1,0 +1,11 @@
+# Virtual environment
+venv/
+__pycache__/
+
+# Credentials & tokens
+credentials/
+*.pickle
+*.json
+
+# OS files
+.DS_Store
